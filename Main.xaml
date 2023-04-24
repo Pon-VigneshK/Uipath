@@ -178,7 +178,7 @@
             <InArgument x:TypeArguments="x:String">[Now.ToString("yyyy-MM-dd_HH-mm-ss")]</InArgument>
           </Assign.Value>
         </Assign>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;The process start time&quot;+ attachmentPath]" />
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;The process start time&quot;+ currentDataTime]" />
         <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_12">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[reportExcelFileName]</OutArgument>
@@ -199,7 +199,7 @@
               <av:PointCollection x:Key="ConnectorLocation">200,337 200,387</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Read the text from PDF and write the report in excel file and move the file to report" sap:VirtualizedContainerService.HintSize="648,4315" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Read the text from PDF and write the report in excel file and move the file to report" sap:VirtualizedContainerService.HintSize="648,4190" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -213,13 +213,13 @@
                 <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(PDFFolderPath)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Data Extractor" sap:VirtualizedContainerService.HintSize="586,4082" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Files]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Data Extractor" sap:VirtualizedContainerService.HintSize="586,3957" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Files]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="File" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,3896" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,3771" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="invoiceValue" />
                     </Sequence.Variables>
@@ -238,7 +238,6 @@
                         </ActivityFunc>
                       </ui:ReadPDFWithOCR.OCREngine>
                     </ui:ReadPDFWithOCR>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="510,85" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[output]" />
                     <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_14">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[PDFFileName]</OutArgument>
