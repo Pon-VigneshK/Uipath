@@ -137,6 +137,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="734,1399" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -422,7 +423,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">190,809.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,81</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">290,890.5 290,920.5 400,920.5 400,1179.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">290,890.5 290,920.5 330,920.5 330,979.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Sequence DisplayName="Read the text from PDF and write the report in excel file and move the file to report" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_46">
@@ -632,7 +633,7 @@
                     <FlowStep x:Name="__ReferenceID3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">300,1179.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">230,979.5</av:Point>
                           <av:Size x:Key="ShapeSize">200,81</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">462,866 462,836 582,836 582,977 292,977 292,857</av:PointCollection>
                         </scg:Dictionary>
